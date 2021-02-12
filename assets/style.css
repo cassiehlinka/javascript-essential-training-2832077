@@ -146,3 +146,15 @@ figure {
   background: black;
   color: white;
 }
+
+/* Challenge chapter 5 */
+.navigation {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+}
+
+.navigation li {
+  display: block;
+  padding: 0 1rem;
+}
