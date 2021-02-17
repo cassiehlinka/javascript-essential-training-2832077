@@ -57,3 +57,20 @@ const content = `
       }</span></li>
     </ul>  
 `;
+
+const createImage = (object) => {
+  let newFigure = document.createElement("figure");
+  let newImage = document.createElement("img");
+  newImage.setAttribute("src", object.image);
+  newFigure.append(newImage);
+  return newFigure;
+};
+
+const createArticle = (frogpack) => {
+  let newArticle = document.createElement("article");
+  newArticle.innerHTML = content;
+  newArticle.prepend(createImage(frogpack));
+  return newArticle;
+};
+
+document.querySelector("main").append(createArticle(frogpack));
