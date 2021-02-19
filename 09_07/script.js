@@ -53,6 +53,15 @@ const newStrapLength = (strapArray) => {
       <button>Update</button>
     `;
 
+    lengthForm.addEventListener("submit", (click) => {
+      click.preventDefault();
+
+      let newValue = lengthForm.querySelector("input").value;
+      listElement.querySelector("span").innerHTML = `${newValue} inches`;
+
+      lengthForm.querySelector("input").value = "";
+    });
+
     // Add form to the end of the list element
     listElement.append(lengthForm);
   });
